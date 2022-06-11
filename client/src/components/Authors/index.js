@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { gql, useQuery } from '@apollo/client';
 
-export const Authors = ({ authors }) => {
-  console.log(authors);
+export const Authors = ({ show, authors }) => {
+  if (!show) {
+    return null;
+  }
 
   return (
     <>
-      <button>authors</button>
-      <button>books</button>
       <h1>Authors</h1>
       <table>
         <thead>
