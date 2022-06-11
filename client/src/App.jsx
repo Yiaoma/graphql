@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ALL_AUTHORS, ALL_BOOKS } from 'utils/queries';
 
 export const App = () => {
-  const [page, setPage] = useState('newBook');
+  const [page, setPage] = useState('authors');
   const authors = useQuery(ALL_AUTHORS);
   const books = useQuery(ALL_BOOKS);
 
