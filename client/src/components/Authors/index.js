@@ -53,16 +53,13 @@ export const Authors = ({ show, authors }) => {
           }}
         >
           <legend>Set Bithyear</legend>
-          <label htmlFor="name">
-            Name
-            <input
-              type="text"
-              value={name}
-              onChange={({ target }) => setName(target.value)}
-              name="name"
-              reqiured
-            />
-          </label>
+          <select value={name} onChange={({ target }) => setName(target.value)}>
+            {authors.map((author) => (
+              <option key={author.name} value={author.name}>
+                {author.name}
+              </option>
+            ))}
+          </select>
           <label htmlFor="born">
             Born
             <input
